@@ -1,4 +1,11 @@
 package com.empresa.excusas.model.clases.modoOperacion;
 
-public class ModoNormal {
+import com.empresa.excusas.interfaces.ModoOperacion;
+
+public class ModoNormal implements ModoOperacion {
+
+    public void modoOperacion() {
+        System.out.println("Modo Normal activado");
+    }
+
 }

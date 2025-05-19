@@ -2,11 +2,11 @@ package com.empresa.excusas.model.clases.excusas;
 
 import com.empresa.excusas.model.clasesAbstractas.TipoExcusa;
 
-public class ExcusaTrivial extends TipoExcusa {
+public class ExcusaCompleja extends TipoExcusa {
 
     @Override
     public String getDescripcion() {
-        return "Excusa trivial";
+        return "Excusa Compleja";
     }
 
     @Override
