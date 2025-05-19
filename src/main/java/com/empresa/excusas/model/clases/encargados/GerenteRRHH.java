@@ -3,7 +3,6 @@ package com.empresa.excusas.model.clases.encargados;
 import com.empresa.excusas.interfaces.ModoOperacion;
 import com.empresa.excusas.model.clases.Excusa;
 import com.empresa.excusas.model.clases.excusas.ExcusaCompleja;
-import com.empresa.excusas.model.clases.excusas.ExcusaTrivial;
 import com.empresa.excusas.model.clasesAbstractas.EncargadoBase;
 
 public class GerenteRRHH extends EncargadoBase {
