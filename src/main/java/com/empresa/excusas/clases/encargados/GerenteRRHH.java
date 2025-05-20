@@ -14,12 +14,12 @@ public class GerenteRRHH extends EncargadoBase {
     }
 
     @Override
-    protected boolean puedeManejar(Excusa excusa) {
+    public boolean puedeManejar(Excusa excusa) {
         return excusa.getTipoExcusa() instanceof ExcusaCompleja;
     }
 
     @Override
-    protected void procesar(Excusa excusa) {
+    public void procesar(Excusa excusa) {
         System.out.println("Gerente de RRHH procesando excusa: " + excusa.getTipoExcusa().getDescripcion());
         modoOperacion(); // ejecuta estrategia actual
     }

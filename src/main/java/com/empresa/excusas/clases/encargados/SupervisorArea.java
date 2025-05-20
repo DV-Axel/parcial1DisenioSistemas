@@ -13,12 +13,12 @@ public class SupervisorArea extends EncargadoBase {
     }
 
     @Override
-    protected boolean puedeManejar(Excusa excusa) {
+    public boolean puedeManejar(Excusa excusa) {
         return excusa.getTipoExcusa() instanceof ExcusaModerada;
     }
 
     @Override
-    protected void procesar(Excusa excusa) {
+    public void procesar(Excusa excusa) {
         System.out.println("SupervisorArea procesando excusa: " + excusa.getTipoExcusa().getDescripcion());
         modoOperacion(); // ejecuta estrategia actual
     }

@@ -12,12 +12,12 @@ public class Recepcionista extends EncargadoBase {
     }
 
     @Override
-    protected boolean puedeManejar(Excusa excusa) {
+    public boolean puedeManejar(Excusa excusa) {
         return excusa.getTipoExcusa() instanceof ExcusaTrivial;
     }
 
     @Override
-    protected void procesar(Excusa excusa) {
+    public void procesar(Excusa excusa) {
         System.out.println("Recepcionista procesando excusa: " + excusa.getTipoExcusa().getDescripcion());
         modoOperacion(); // ejecuta estrategia actual
     }

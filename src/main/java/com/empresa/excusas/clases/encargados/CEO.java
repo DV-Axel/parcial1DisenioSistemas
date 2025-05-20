@@ -1,6 +1,25 @@
 package com.empresa.excusas.clases.encargados;
 
+import com.empresa.excusas.clases.Excusa;
+import com.empresa.excusas.clases.tiposExcusas.ExcusaInverosimil;
 import com.empresa.excusas.clasesAbstractas.EncargadoBase;
+import com.empresa.excusas.interfaces.ModoOperacion;
+
 
 public class CEO extends EncargadoBase {
+
+    public CEO(String nombre, String email, int legajo, ModoOperacion modoOperacion) {
+        super(nombre, email, legajo, modoOperacion);
+    }
+
+    @Override
+    public boolean puedeManejar(Excusa excusa) {
+        return excusa.getTipoExcusa() instanceof ExcusaInverosimil;
+    }
+
+    @Override
+    public void procesar(Excusa excusa) {
+        System.out.println("CEO procesando excusa: " + excusa.getTipoExcusa().getDescripcion());
+        modoOperacion(); // ejecuta estrategia actual
+    }
 }

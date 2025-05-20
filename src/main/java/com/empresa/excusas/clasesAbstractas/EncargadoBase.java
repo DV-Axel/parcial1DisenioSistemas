@@ -40,6 +40,16 @@ public abstract class EncargadoBase extends Empleado implements Encargado {
 
     @Override
     public void manejarExcusa(Excusa excusa) {
+        if (modoOperacion != null) {
+            modoOperacion.manejarExcusa(this, excusa);
+        } else {
+            System.out.println("No hay modo de operación asignado.");
+        }
+    }
+
+
+    // Método de fallback si el modo operativo es 'Normal' o se usa en otros modos.
+    public void manejarExcusaBase(Excusa excusa) {
         if (puedeManejar(excusa)) {
             procesar(excusa);
         } else if (siguiente != null) {
@@ -49,7 +59,8 @@ public abstract class EncargadoBase extends Empleado implements Encargado {
         }
     }
 
-    protected abstract boolean puedeManejar(Excusa excusa);
-    protected abstract void procesar(Excusa excusa);
+
+    public abstract boolean puedeManejar(Excusa excusa);
+    public abstract void procesar(Excusa excusa);
 }
 
