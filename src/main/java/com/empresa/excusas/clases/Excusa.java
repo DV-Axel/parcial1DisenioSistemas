@@ -17,6 +17,10 @@ public class Excusa  {
         return tipoExcusa;
     }
 
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
     @Override
     public String toString() {
         return "Excusa{" +

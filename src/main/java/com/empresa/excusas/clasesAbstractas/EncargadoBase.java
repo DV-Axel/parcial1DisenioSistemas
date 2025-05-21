@@ -24,8 +24,8 @@ public abstract class EncargadoBase extends Empleado implements Encargado {
 
     @Override
     public void modoOperacion() {
-        if (modoOperacion != null) {
-            modoOperacion.modoOperacion();
+        if (modoOperacion != null) { // Verifica si el modo de operación no es nulo
+            modoOperacion.modoOperacion();  // Llama al método del modo de operación
         }
     }
 
