@@ -13,7 +13,6 @@ public class ModoVago implements ModoOperacion {
 
     @Override
     public void manejarExcusa(EncargadoBase encargado, Excusa excusa) {
-        System.out.println(encargado.getNombre() + " está en modo VAGO. No hace nada y delega.");
 
         if (encargado.getSiguiente() != null) {
             encargado.getSiguiente().manejarExcusa(excusa);

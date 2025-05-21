@@ -45,6 +45,9 @@ public class CEO extends EncargadoBase implements ObserverProntuario {
                 excusa
         );
         AdministradorProntuarios.getInstancia().agregarProntuario(prontuario);
+
+        System.out.println(AdministradorProntuarios.getInstancia().getProntuarios());
+
     }
 
     @Override
