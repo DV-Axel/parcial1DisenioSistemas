@@ -1,6 +1,6 @@
 package com.empresa.excusas.clases.encargados;
 
-import com.empresa.excusas.Email;
+import com.empresa.excusas.clases.Email;
 import com.empresa.excusas.clases.Excusa;
 import com.empresa.excusas.clases.tiposExcusas.ExcusaTrivial;
 import com.empresa.excusas.clasesAbstractas.EncargadoBase;

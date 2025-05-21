@@ -37,9 +37,9 @@ public class Main {
         Encargado gerenteRRHH2 = new GerenteRRHH("Hernan", "hernan@empresa.com", 333, vago);
         Encargado gerenteRRHH3 = new GerenteRRHH("Mario", "mario@empresa.com", 222, vago);
         Encargado gerenteRRHH4 = new GerenteRRHH("Guillermo", "guillermo@empresa.com", 534, normal);
-        Encargado ceo = new CEO("Lucía", "lucia@empresa.com", 178, vago);
-        Encargado ceo2 = new CEO("Maria", "maria@empresa.com", 999, normal);
-        Encargado ceo3 = new CEO("Carlos", "carlos@empresa.com", 352, normal);
+            Encargado ceo = new CEO("Lucía", "lucia@empresa.com", 178, normal);
+            Encargado ceo2 = new CEO("Maria", "maria@empresa.com", 999, normal);
+            Encargado ceo3 = new CEO("Carlos", "carlos@empresa.com", 352, vago);
 
         // Cadena de responsabilidad
         recepcionista.setSiguiente(ceo);
@@ -59,8 +59,8 @@ public class Main {
         Excusa excusa4 = new Excusa(empleado, new ExcusaInverosimil("El caballo de mi abuela se escapo y me mordió"));
 
         // Probar excusas
-        System.out.println("\n=== Excusa Moderada ===");
-        recepcionista.manejarExcusa(excusa2);
+        System.out.println("\n=== Excusa Inverosimil ===");
+        recepcionista.manejarExcusa(excusa4);
 
         //System.out.println("\n=== Excusa Moderada ===");
         //recepcionista.manejarExcusa(excusa2);
