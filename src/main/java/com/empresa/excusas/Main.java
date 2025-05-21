@@ -30,22 +30,23 @@ public class Main {
         ModoOperacion normal = new ModoNormal();
 
         // Encargados con diferentes modos
-        Encargado recepcionista = new Recepcionista("Luis", "luis@empresa.com", 100, vago);
-        Encargado recepcionista2 = new Recepcionista("Marcos", "marcos@empresa.com", 132, vago);
+        Encargado recepcionista = new Recepcionista("Luis", "luis@empresa.com", 100, normal);
+        Encargado recepcionista2 = new Recepcionista("Marcos", "marcos@empresa.com", 132, normal);
         Encargado recepcionista3 = new Recepcionista("Eduardo", "eduardo@empresa.com", 989, normal);
 
-        Encargado supervisor = new SupervisorArea("Marta", "marta@empresa.com", 101, normal);
+        Encargado supervisor = new SupervisorArea("Marta", "marta@empresa.com", 101, productivo);
 
-        Encargado gerenteRRHH = new GerenteRRHH("Sofía", "sofia@empresa.com", 102, normal);
+        Encargado gerenteRRHH = new GerenteRRHH("Sofía", "sofia@empresa.com", 102, vago);
         Encargado gerenteRRHH2 = new GerenteRRHH("Hernan", "hernan@empresa.com", 333, vago);
         Encargado gerenteRRHH3 = new GerenteRRHH("Mario", "mario@empresa.com", 222, vago);
-        Encargado gerenteRRHH4 = new GerenteRRHH("Guillermo", "guillermo@empresa.com", 534, normal);
+        Encargado gerenteRRHH4 = new GerenteRRHH("Guillermo", "guillermo@empresa.com", 534, vago);
 
-        Encargado ceo = new CEO("Lucía", "lucia@empresa.com", 178, normal);
-        Encargado ceo2 = new CEO("Maria", "maria@empresa.com", 999, normal);
+        Encargado ceo = new CEO("Lucía", "lucia@empresa.com", 178, vago);
+        Encargado ceo2 = new CEO("Maria", "maria@empresa.com", 999, vago);
         Encargado ceo3 = new CEO("Carlos", "carlos@empresa.com", 352, vago);
 
         // Cadena de responsabilidad
+
         recepcionista.setSiguiente(gerenteRRHH);
         gerenteRRHH.setSiguiente(gerenteRRHH2);
         gerenteRRHH2.setSiguiente(supervisor);
@@ -69,9 +70,9 @@ public class Main {
         Excusa inverosimil = new Excusa(empleado, new ExcusaInverosimil("El caballo de mi abuela se escapo y me mordió"));
 
         // Probar excusas
-        System.out.println("\n=== Excusa inverosimil ===");
-        recepcionista.manejarExcusa(inverosimil);
-        recepcionista.manejarExcusa(inverosimil);
+
+        System.out.println("\n=== Excusa moderada ===");
+        recepcionista.manejarExcusa(moderada);
 
         //System.out.println("\n=== Excusa Moderada ===");
         //recepcionista.manejarExcusa(excusa2);

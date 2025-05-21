@@ -48,16 +48,7 @@ public abstract class EncargadoBase extends Empleado implements Encargado {
     }
 
 
-    // Método de fallback si el modo operativo es 'Normal' o se usa en otros modos.
-    public void manejarExcusaBase(Excusa excusa) {
-        if (puedeManejar(excusa)) {
-            procesar(excusa);
-        } else if (siguiente != null) {
-            siguiente.manejarExcusa(excusa);
-        } else {
-            System.out.println("La excusa no puede ser manejada.");
-        }
-    }
+
 
 
     public abstract boolean puedeManejar(Excusa excusa);

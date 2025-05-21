@@ -13,6 +13,13 @@ public class ModoNormal implements ModoOperacion {
 
     @Override
     public void manejarExcusa(EncargadoBase encargado, Excusa excusa) {
-        encargado.manejarExcusaBase(excusa);
+
+        if (encargado.puedeManejar(excusa)) {
+            encargado.procesar(excusa);
+        } else if (encargado.getSiguiente() != null) {
+            encargado.getSiguiente().manejarExcusa(excusa);
+        } else {
+            System.out.println("La excusa no puede ser manejada.");
+        }
     }
 }
