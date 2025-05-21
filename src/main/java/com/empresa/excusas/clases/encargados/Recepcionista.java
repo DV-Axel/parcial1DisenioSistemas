@@ -18,7 +18,7 @@ public class Recepcionista extends EncargadoBase {
 
     @Override
     public void procesar(Excusa excusa) {
-        System.out.println("Recepcionista procesando excusa: " + excusa.getTipoExcusa().getDescripcion());
+        System.out.println(this.getNombre() + " procesando excusa: " + excusa.getTipoExcusa().getDescripcion());
         modoOperacion(); // ejecuta estrategia actual
     }
 }

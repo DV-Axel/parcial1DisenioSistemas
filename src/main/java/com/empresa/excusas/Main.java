@@ -30,13 +30,15 @@ public class Main {
         ModoOperacion normal = new ModoNormal();
 
         // Encargados con diferentes modos
-        Encargado recepcionista = new Recepcionista("Luis", "luis@empresa.com", 100, normal);
+        Encargado recepcionista = new Recepcionista("Luis", "luis@empresa.com", 100, vago);
+        Encargado recepcionista2 = new Recepcionista("Marcos", "marcos@empresa.com", 100, normal);
         Encargado supervisor = new SupervisorArea("Marta", "marta@empresa.com", 101, normal);
         Encargado gerenteRRHH = new GerenteRRHH("Sofía", "sofia@empresa.com", 102, normal);
-        Encargado ceo = new CEO("Lucía", "lucia@empresa.com", 104, productivo);
+        Encargado ceo = new CEO("Lucía", "lucia@empresa.com", 104, normal);
 
         // Cadena de responsabilidad
-        recepcionista.setSiguiente(supervisor);
+        recepcionista.setSiguiente(recepcionista2);
+        recepcionista2.setSiguiente(supervisor);
         supervisor.setSiguiente(gerenteRRHH);
         gerenteRRHH.setSiguiente(ceo);
 
@@ -46,15 +48,22 @@ public class Main {
 
         // Crear excusas
         Excusa excusa1 = new Excusa(empleado, new ExcusaTrivial("Llegué tarde porque perdí el bondi"));
-        Excusa excusa2 = new Excusa(empleado, new ExcusaModerada("Me dormí y perdí una reunión"));
-        Excusa excusa3 = new Excusa(empleado, new ExcusaCompleja("No entregué el informe a tiempo"));
-        Excusa excusa4 = new Excusa(empleado, new ExcusaInverosimil("Filtré información confidencial"));
+        Excusa excusa2 = new Excusa(empleado, new ExcusaModerada("Tuve que cuidar a un familiar"));
+        Excusa excusa3 = new Excusa(empleado, new ExcusaCompleja("Una paloma robó mi bicicleta"));
+        Excusa excusa4 = new Excusa(empleado, new ExcusaInverosimil("El caballo de mi abuela se escapo y me mordió"));
 
         // Probar excusas
         System.out.println("\n=== Excusa Trivial ===");
-        recepcionista.manejarExcusa(excusa3);
+        recepcionista.manejarExcusa(excusa1);
 
+        //System.out.println("\n=== Excusa Moderada ===");
+        //recepcionista.manejarExcusa(excusa2);
 
+        //System.out.println("\n=== Excusa Compleja ===");
+        //recepcionista.manejarExcusa(excusa3);
+
+        //System.out.println("\n=== Excusa Inverosimil ===");
+        //recepcionista.manejarExcusa(excusa4);
 
     }
 }
