@@ -1,7 +1,6 @@
 package com.empresa.excusas;
 
 
-import com.empresa.excusas.clases.EmpleadoExcusador;
 import com.empresa.excusas.clases.Excusa;
 import com.empresa.excusas.clases.encargados.CEO;
 import com.empresa.excusas.clases.encargados.GerenteRRHH;
@@ -61,7 +60,7 @@ public class Main {
 
 
         // Empleado que presenta las excusas
-        EmpleadoExcusador empleado = new EmpleadoExcusador("Juan", "juan@empresa.com", 1) {};
+        Empleado empleado = new Empleado("Juan", "juan@empresa.com", 1) {};
 
         // Crear excusas
         Excusa trivial = new Excusa(empleado, new ExcusaTrivial("Llegué tarde porque perdí el bondi"));

@@ -2,7 +2,7 @@ package com.empresa.excusas.clasesAbstractas;
 
 import com.empresa.excusas.interfaces.IEmpleado;
 
-public abstract class Empleado implements IEmpleado {
+public class Empleado implements IEmpleado {
 
     private String nombre;
     private String email;
